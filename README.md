@@ -14,19 +14,19 @@ The project is structured into **four main JSON files**:
 
 1. **Problems JSON**  
    Detailed problems in Jharkhand tourism ecosystem.  
-   [View/Download Problems JSON](https://todiagram.com/editor?source=pwa&doc=1da0a3f3dd6a890b5ba3c5a8)
+   [View Problems](https://todiagram.com/editor?source=pwa&doc=1da0a3f3dd6a890b5ba3c5a8)
 
 2. **Solutions JSON**  
    Proposed solutions mapped to each problem with integration guidelines.  
-   [View/Download Solutions JSON](https://todiagram.com/editor?source=pwa&doc=970d724eda99a411c2abe1ba)
+   [View Solutions](https://todiagram.com/editor?source=pwa&doc=970d724eda99a411c2abe1ba)
 
 3. **Tech Stack JSON**  
    Recommended cloud services and tech usage for frontend, backend, AI, AR/VR, database, and media.  
-   [View/Download Tech Stack JSON](https://todiagram.com/editor?source=pwa&doc=b7b343363f321a23f473f130)
+   [View Tech Stack](https://todiagram.com/editor?source=pwa&doc=b7b343363f321a23f473f130)
 
 4. **Extra Considerations JSON**  
    Additional best practices: security, scalability, offline access, women safety, eco-tourism, gamification, analytics, accessibility, and disaster recovery.  
-   [View/Download Extra Considerations JSON](https://todiagram.com/editor?source=pwa&doc=58c2fa7e64add04ba5644d8d)
+   [View Extra Considerations](https://todiagram.com/editor?source=pwa&doc=58c2fa7e64add04ba5644d8d)
 
 ## Usage
 
