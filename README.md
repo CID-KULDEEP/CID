@@ -3,6 +3,14 @@
 This repository contains the **Smart Jharkhand Tourism (SJT)** project, designed for industry-level prototype and SIH participation.  
 The project covers **problems, solutions, tech stack, and extra considerations** to create a complete digital tourism platform.
 
+## WORKFLOW
+
+KULDEEP --> AI/ML | Accessibility_Language |  Marketing_Branding 
+ANKIT --> BLOCKCHAIN | SECURITY 
+KRISHNAPAL --> ANALYTICAL - DASHBORD | Backend - APIs
+PRINCE --> FRONTEND HEAD  
+PRIYANSHU --> FRONTEND DEV | BACKEND - AUTH | DATABASE
+
 ## Project Overview
 
 Jharkhand has immense potential in eco-tourism, cultural heritage, and tribal experiences. Challenges include fragmented information, low technology adoption, safety concerns, and limited community participation.  
@@ -37,3 +45,4 @@ The project is structured into **four main JSON files**:
 ## License
 
 All content is created for **educational and competition purposes**. Original work for Smart Jharkhand Tourism prototype.
+
