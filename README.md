@@ -45,4 +45,3 @@ The project is structured into **four main JSON files**:
 ## License
 
 All content is created for **educational and competition purposes**. Original work for Smart Jharkhand Tourism prototype.
-
