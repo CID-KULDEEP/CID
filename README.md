@@ -5,7 +5,7 @@ The project covers **problems, solutions, tech stack, and extra considerations**
 
 ## WORKFLOW
 
-KULDEEP --> AI/ML | Accessibility_Language |  Marketing_Branding \n
+KULDEEP --> AI/ML | Accessibility_Language |  Marketing_Branding "\n"
 ANKIT --> BLOCKCHAIN | SECURITY \n
 KRISHNAPAL --> ANALYTICAL - DASHBORD | Backend - APIs \n
 PRINCE --> FRONTEND HEAD  \n
