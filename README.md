@@ -5,11 +5,11 @@ The project covers **problems, solutions, tech stack, and extra considerations**
 
 ## WORKFLOW
 
-KULDEEP --> AI/ML | Accessibility_Language |  Marketing_Branding 
-ANKIT --> BLOCKCHAIN | SECURITY 
-KRISHNAPAL --> ANALYTICAL - DASHBORD | Backend - APIs
-PRINCE --> FRONTEND HEAD  
-PRIYANSHU --> FRONTEND DEV | BACKEND - AUTH | DATABASE
+KULDEEP --> AI/ML | Accessibility_Language |  Marketing_Branding \n
+ANKIT --> BLOCKCHAIN | SECURITY \n
+KRISHNAPAL --> ANALYTICAL - DASHBORD | Backend - APIs \n
+PRINCE --> FRONTEND HEAD  \n
+PRIYANSHU --> FRONTEND DEV | BACKEND - AUTH | DATABASE \n
 
 ## Project Overview
 
