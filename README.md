@@ -7,7 +7,7 @@ The project covers **problems, solutions, tech stack, and extra considerations**
 
 <h2> KULDEEP --> AI/ML | ACCESSIBILITY_LANGUAGE |  MARKETING_BRANDING <br>
 ANKIT --> BLOCKCHAIN | SECURITY <br>
-KRISHNAPAL --> ANALYTICAL - DASHBORD | BACKEND - APIS <br>
+KRISHNAPAL --> ANALYTICAL - DASHBORD | BACKEND - API's <br>
 PRINCE --> FRONTEND HEAD  <br>
 PRIYANSHU --> FRONTEND DEV | BACKEND - AUTH | DATABASE <br> </h2>
 
