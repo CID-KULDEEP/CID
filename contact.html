@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jharkhand Explorer</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Jharkhand Explorer </span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/heritage.html" class="nav-link">Rich Cultural Heritage</a>
+                <a href="/guides.html" class="nav-link">Guides</a>
+                <a href="/transport.html" class="nav-link">Transportation & Guide</a>
+                <a href="/contact.html" class="nav-link active">Contact</a>
+                
+                <a href="/shop.html" class="nav-link">Shop</a>
+            </div>
+
+            <div class="nav-actions">
+                <form class="search-form" id="searchForm">
+                    <label for="searchInput" class="sr-only">Search</label>
+                    <input type="search" placeholder="Search..." class="search-input" id="searchInput">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="btn btn--login">Login</button>
+
+                <button class="btn btn--sos" id="sosButton" aria-label="Emergency SOS">
+                    <i class="fas fa-exclamation-triangle"></i> SOS
+                </button>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Get in Touch</h1>
+                    <p class="section-subtitle">Have questions or need assistance? We're here to help!</p>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-form-container">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName" class="form-label">Your Name <span aria-hidden="true">*</span></label>
+                                <input type="text" id="contactName" class="form-control" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail" class="form-label">Your Email <span aria-hidden="true">*</span></label>
+                                <input type="email" id="contactEmail" class="form-control" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone" class="form-label">Phone Number (Optional)</label>
+                                <input type="tel" id="contactPhone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactTopic" class="form-label">Topic</label>
+                                <select id="contactTopic" class="form-control">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="booking">Booking Support</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label">Your Message <span aria-hidden="true">*</span></label>
+                                <textarea id="contactMessage" class="form-control" rows="5" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-container">
+                        <h3>Contact Information</h3>
+                        <p>We aim to respond to all inquiries within 24-48 hours.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>Phone: +91 12345 67890</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email: info@jharkhandexplorer.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Address: 123 Explorer Road, Ranchi, Jharkhand, India</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Support Hours: Mon-Fri, 9 AM - 6 PM IST</span>
+                            </div>
+                        </div>
+                        <p class="mt-8">Looking for quick answers? Visit our <a href="/faq.html" class="text-secondary-accent">FAQs page</a>.</p>
+                        <div class="contact-map">
+                            <!-- Placeholder for an embedded map (e.g., Google Maps iframe) -->
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Ranchi,Jharkhand"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span>Jharkhand Explorer</span>
+                    </div>
+                    <p>Discover the incredible beauty of Jharkhand with our AI-powered travel platform.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/heritage/">Rich Cultural Heritage</a></li>
+                        <li><a href="/guides/">Guides</a></li>
+                        <li><a href="/transport/">Transportation & Guide</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/shop.html">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/#ai-planner">AI Trip Planner</a></li>
+                        <li><a href="/#accommodation">Accommodation</a></li>
+                        <li><a href="/guides/">Local Guides</a></li>
+                        <li><a href="/transport/">Transportation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 12345 67890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@jharkhandexplorer.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ranchi, Jharkhand, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jharkhand Explorer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

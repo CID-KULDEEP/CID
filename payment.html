@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Booking - Jharkhand Explorer</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Jharkhand Explorer </span>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn--sos" id="sosButton" aria-label="Emergency SOS">
+                    <i class="fas fa-exclamation-triangle"></i> SOS
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="payment-section">
+            <div class="container payment-container">
+                <div class="section-header">
+                    <h1 class="section-title">Complete Your Booking</h1>
+                    <p class="section-subtitle">Just a few steps away from your adventure!</p>
+                </div>
+
+                <div class="progress-bar" role="progressbar" aria-label="Booking Progress">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-circle">1</span>
+                        <span class="step-label">Traveler Details</span>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-circle">2</span>
+                        <span class="step-label">Review & Policies</span>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-circle">3</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <span class="step-circle">4</span>
+                        <span class="step-label">Confirmation</span>
+                    </div>
+                </div>
+
+                <form id="travelerDetailsForm" class="payment-form-section">
+                    <h3>Traveler Details</h3>
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="fullName" class="form-control" required autocomplete="name" aria-required="true">
+                        <div class="error-message" id="fullNameError">Please enter your full name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="travelerEmail" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                        <input type="email" id="travelerEmail" class="form-control" required autocomplete="email" aria-required="true">
+                        <div class="error-message" id="travelerEmailError">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" id="phoneNumber" class="form-control" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="addressLine1" class="form-label">Address Line 1 <span aria-hidden="true">*</span></label>
+                        <input type="text" id="addressLine1" class="form-control" required autocomplete="address-line1" aria-required="true">
+                        <div class="error-message" id="addressLine1Error">Please enter your address.</div>
+                    </div>
+                     <div class="form-group">
+                        <label for="city" class="form-label">City <span aria-hidden="true">*</span></label>
+                        <input type="text" id="city" class="form-control" required autocomplete="address-level2" aria-required="true">
+                        <div class="error-message" id="cityError">Please enter your city.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="form-label">State <span aria-hidden="true">*</span></label>
+                        <input type="text" id="state" class="form-control" required autocomplete="address-level1" aria-required="true">
+                        <div class="error-message" id="stateError">Please enter your state.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode" class="form-label">Zip Code <span aria-hidden="true">*</span></label>
+                        <input type="text" id="zipCode" class="form-control" required autocomplete="postal-code" aria-required="true">
+                        <div class="error-message" id="zipCodeError">Please enter your zip code.</div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Proceed to Review</button>
+                </form>
+
+                <div id="reviewPoliciesSection" class="payment-form-section" style="display: none;">
+                    <h3>Review Your Booking</h3>
+                    <div class="payment-summary">
+                        <h4>Booking Summary</h4>
+                        <div class="payment-summary-item">
+                            <span>Item:</span>
+                            <span id="summaryItemName">N/A</span>
+                        </div>
+                        <div class="payment-summary-item">
+                            <span>Price:</span>
+                            <span id="summaryItemPrice">₹0.00</span>
+                        </div>
+                        <div class="payment-summary-item">
+                            <span>Taxes & Fees:</span>
+                            <span>₹150.00</span>
+                        </div>
+                        <div class="payment-summary-total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">₹150.00</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-8">
+                        <input type="checkbox" id="agreePolicies" class="form-check-input" required aria-required="true">
+                        <label for="agreePolicies" class="form-check-label">I agree to the <a href="#" class="text-secondary-accent">Terms & Conditions</a> and <a href="#" class="text-secondary-accent">Cancellation Policy</a> <span aria-hidden="true">*</span></label>
+                        <div class="error-message" id="agreePoliciesError">You must agree to the terms and policies.</div>
+                    </div>
+
+                    <button type="button" class="btn btn--primary btn--full-width" id="proceedToPaymentBtn">Proceed to Payment</button>
+                </div>
+
+                <form id="paymentForm" class="payment-form-section" style="display: none;">
+                    <h3>Payment Information</h3>
+
+                    <div class="payment-methods">
+                        <div class="form-group">
+                            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+                            <label for="creditCard">Credit/Debit Card</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="upi" name="paymentMethod" value="upi">
+                            <label for="upi">UPI</label>
+                        </div>
+                         <div class="form-group">
+                            <input type="radio" id="netBanking" name="paymentMethod" value="netBanking">
+                            <label for="netBanking">Net Banking</label>
+                        </div>
+                    </div>
+
+                    <div id="cardDetails" class="mt-8">
+                        <div class="form-group">
+                            <label for="cardNumber" class="form-label">Card Number <span aria-hidden="true">*</span></label>
+                            <input type="text" id="cardNumber" class="form-control" placeholder="XXXX XXXX XXXX XXXX" required aria-required="true" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number">
+                            <div class="error-message" id="cardNumberError">Please enter a valid card number.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName" class="form-label">Name on Card <span aria-hidden="true">*</span></label>
+                            <input type="text" id="cardName" class="form-control" required aria-required="true" autocomplete="cc-name">
+                            <div class="error-message" id="cardNameError">Please enter the name on your card.</div>
+                        </div>
+                        <div class="form-group" style="display: flex; gap: 1rem;">
+                            <div style="flex: 1;">
+                                <label for="expiryDate" class="form-label">Expiry Date <span aria-hidden="true">*</span></label>
+                                <input type="text" id="expiryDate" class="form-control" placeholder="MM/YY" required aria-required="true" pattern="(0[1-9]|1[0-2])\/([0-9]{2})" inputmode="numeric">
+                                <div class="error-message" id="expiryDateError">Please enter a valid expiry date (MM/YY).</div>
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="cvv" class="form-label">CVV <span aria-hidden="true">*</span></label>
+                                <input type="text" id="cvv" class="form-control" placeholder="XXX" required aria-required="true" pattern="[0-9]{3,4}" inputmode="numeric">
+                                <div class="error-message" id="cvvError">Please enter a valid CVV.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="upiDetails" style="display:none;" class="mt-8">
+                         <div class="form-group">
+                            <label for="upiId" class="form-label">UPI ID <span aria-hidden="true">*</span></label>
+                            <input type="text" id="upiId" class="form-control" placeholder="yourname@bank" required>
+                             <div class="error-message" id="upiIdError">Please enter a valid UPI ID.</div>
+                        </div>
+                    </div>
+
+                    <div class="trust-signals mt-8">
+                        <p><i class="fas fa-lock"></i> Secure Payment Gateway</p>
+                        <p><i class="fas fa-shield-alt"></i> Your data is protected</p>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full-width mt-8">Pay Now</button>
+                </form>
+
+                <div id="confirmationSection" class="payment-form-section" style="display: none;">
+                    <div class="confirmation-message">
+                         <i class="fas fa-check-circle" style="color: var(--color-success); font-size: 5rem; margin-bottom: 1rem;"></i>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thank you for booking with Jharkhand Explorer. Your adventure awaits!</p>
+                        <p>A confirmation email with all details has been sent to <strong id="confirmedEmail">your email</strong>.</p>
+                        <a href="/" class="btn btn--primary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jharkhand Explorer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const travelerDetailsForm = document.getElementById('travelerDetailsForm');
+            const reviewPoliciesSection = document.getElementById('reviewPoliciesSection');
+            const paymentForm = document.getElementById('paymentForm');
+            const confirmationSection = document.getElementById('confirmationSection');
+            const proceedToPaymentBtn = document.getElementById('proceedToPaymentBtn');
+            const agreePoliciesCheckbox = document.getElementById('agreePolicies');
+            const progressSteps = document.querySelectorAll('.progress-step');
+            
+            const cardDetailsDiv = document.getElementById('cardDetails');
+            const upiDetailsDiv = document.getElementById('upiDetails');
+            const paymentMethodRadios = document.querySelectorAll('input[name="paymentMethod"]');
+
+
+            let travelerEmailValue = '';
+
+            function updateProgressBar(step) {
+                progressSteps.forEach((s, index) => {
+                    s.classList.remove('active', 'completed');
+                    if (index + 1 < step) {
+                        s.classList.add('completed');
+                    } else if (index + 1 === step) {
+                        s.classList.add('active');
+                    }
+                });
+            }
+
+            function showStep(stepNumber) {
+                travelerDetailsForm.style.display = 'none';
+                reviewPoliciesSection.style.display = 'none';
+                paymentForm.style.display = 'none';
+                confirmationSection.style.display = 'none';
+
+                if (stepNumber === 1) travelerDetailsForm.style.display = 'block';
+                if (stepNumber === 2) {
+                    reviewPoliciesSection.style.display = 'block';
+                    populateBookingSummary();
+                }
+                if (stepNumber === 3) paymentForm.style.display = 'block';
+                if (stepNumber === 4) {
+                    confirmationSection.style.display = 'block';
+                    document.getElementById('confirmedEmail').textContent = travelerEmailValue;
+                }
+                updateProgressBar(stepNumber);
+            }
+
+            function validateField(input, errorEl) {
+                if (input.checkValidity()) {
+                    input.closest('.form-group').classList.remove('has-error');
+                    errorEl.style.display = 'none';
+                    return true;
+                }
+                input.closest('.form-group').classList.add('has-error');
+                errorEl.style.display = 'block';
+                return false;
+            }
+
+            travelerDetailsForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+                travelerDetailsForm.querySelectorAll('[required]').forEach(input => {
+                    const errorElement = document.getElementById(input.id + 'Error');
+                    if (!validateField(input, errorElement)) isValid = false;
+                });
+
+                if (isValid) {
+                    travelerEmailValue = document.getElementById('travelerEmail').value;
+                    showStep(2);
+                }
+            });
+
+            proceedToPaymentBtn.addEventListener('click', () => {
+                const errorElement = document.getElementById('agreePoliciesError');
+                if (agreePoliciesCheckbox.checked) {
+                    agreePoliciesCheckbox.closest('.form-group').classList.remove('has-error');
+                    errorElement.style.display = 'none';
+                    showStep(3);
+                } else {
+                    agreePoliciesCheckbox.closest('.form-group').classList.add('has-error');
+                    errorElement.style.display = 'block';
+                }
+            });
+            
+            paymentMethodRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    cardDetailsDiv.style.display = 'none';
+                    upiDetailsDiv.style.display = 'none';
+                    
+                    if (e.target.value === 'creditCard') cardDetailsDiv.style.display = 'block';
+                    if (e.target.value === 'upi') upiDetailsDiv.style.display = 'block';
+                });
+            });
+
+            paymentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+                const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+                if (selectedMethod === 'creditCard') {
+                     paymentForm.querySelectorAll('#cardDetails [required]').forEach(input => {
+                        const errorElement = document.getElementById(input.id + 'Error');
+                        if (!validateField(input, errorElement)) isValid = false;
+                    });
+                } else if (selectedMethod === 'upi') {
+                     paymentForm.querySelectorAll('#upiDetails [required]').forEach(input => {
+                        const errorElement = document.getElementById(input.id + 'Error');
+                        if (!validateField(input, errorElement)) isValid = false;
+                    });
+                }
+               
+                if (isValid) {
+                    setTimeout(() => showStep(4), 1000); // Simulate processing
+                }
+            });
+
+            function populateBookingSummary() {
+                const bookingItem = JSON.parse(sessionStorage.getItem('bookingItem'));
+                if (bookingItem) {
+                    document.getElementById('summaryItemName').textContent = bookingItem.name;
+                    const price = parseFloat(bookingItem.price) || 0;
+                    const taxes = 150.00;
+                    document.getElementById('summaryItemPrice').textContent = `₹${price.toFixed(2)}`;
+                    document.getElementById('summaryTotal').textContent = `₹${(price + taxes).toFixed(2)}`;
+                }
+            }
+
+            showStep(1);
+        });
+    </script>
+</body>
+</html>

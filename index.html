@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand Explorer - Discover the Land of Forests & Falls</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Jharkhand Explorer </span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="heritage.html" class="nav-link">Rich Cultural Heritage</a>
+                <a href="guides.html" class="nav-link">Guides</a>
+                <a href="transport.html" class="nav-link">Transportation & Guide</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+            </div>
+
+            <div class="nav-actions">
+                <form class="search-form" id="searchForm">
+                    <label for="searchInput" class="sr-only">Search</label>
+                    <input type="search" placeholder="Search..." class="search-input" id="searchInput">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button class="btn btn--login">Login</button>
+
+                <button class="btn btn--sos" id="sosButton" aria-label="Emergency SOS">
+                    <i class="fas fa-exclamation-triangle"></i> SOS
+                </button>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-video">
+            <video autoplay muted loop id="heroVideo">
+                <source src="4133023-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">32</span>
+                    <span class="stat-label">Tribal Communities</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">National Parks</span>
+                </div>
+            </div>
+
+            <h1 class="hero-title">Discover Incredible Jharkhand</h1>
+            <h2 class="hero-subtitle">The Land of Forests & Falls</h2>
+            <p class="hero-description">AI-Powered Trip Planning | Cultural Heritage | Adventure Tourism</p>
+
+            <div class="hero-actions">
+                <button class="btn btn--primary btn--hero" id="planTripBtn">
+                    Plan My Trip with AI
+                </button>
+                <button class="btn btn--secondary btn--hero" id="exploreBtn">
+                    <i class="fas fa-compass"></i>
+                    Explore Destinations
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- AI Trip Planner Section -->
+    <section class="ai-planner" id="ai-planner">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Trip Planner</h2>
+                <p class="section-subtitle">Let our intelligent assistant plan your perfect Jharkhand adventure</p>
+            </div>
+
+            <div class="planner-container">
+                <div class="planner-form">
+                    <div class="form-group">
+                        <label for="duration" class="form-label">Trip Duration</label>
+                        <select class="form-control" id="duration">
+                            <option value="">Select duration</option>
+                            <option value="1-2">1-2 days</option>
+                            <option value="3-4">3-4 days</option>
+                            <option value="5-7">5-7 days</option>
+                            <option value="week+">More than a week</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget" class="form-label">Budget Range (₹)</label>
+                        <div class="budget-slider">
+                            <input type="range" id="budget" min="5000" max="50000" value="15000" class="slider">
+                            <div class="budget-value">₹<span id="budgetValue">15,000</span></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Interests</label>
+                        <div class="interest-tags">
+                            <button class="interest-tag" data-interest="adventure">Adventure</button>
+                            <button class="interest-tag" data-interest="culture">Culture</button>
+                            <button class="interest-tag" data-interest="wildlife">Wildlife</button>
+                            <button class="interest-tag" data-interest="spiritual">Spiritual</button>
+                            <button class="interest-tag" data-interest="photography">Photography</button>
+                            <button class="interest-tag" data-interest="trekking">Trekking</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn--primary btn--full-width" id="generatePlan">
+                        <i class="fas fa-magic"></i>
+                        Generate AI Plan
+                    </button>
+                </div>
+
+                <div class="ai-chat" id="aiChat">
+                    <div class="ai-avatar">
+                        <div class="avatar-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="typing-indicator" id="typingIndicator">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-response" id="aiResponse">
+                        <p>Hi! I'm your AI travel assistant. Fill out the form and I'll create a personalized Jharkhand itinerary for you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <div class="section-video-bg">
+        <video autoplay muted loop class="background-video">
+            <source src="13061900-hd_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Destinations</h2>
+            <p class="section-subtitle">Explore the most beautiful places in Jharkhand</p>
+        </div>
+
+        <div class="destination-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Waterfall">Waterfalls</button>
+            <button class="filter-btn" data-filter="Hill Station">Hill Stations</button>
+            <button class="filter-btn" data-filter="Wildlife">Wildlife</button>
+            <button class="filter-btn" data-filter="Religious">Religious</button>
+        </div>
+
+        <div class="destinations-grid" id="destinationsGrid">
+            </div>
+    </div>
+    </section>
+
+    <!-- Culture Section (Tribal Communities on Home Page) -->
+    <section class="culture" id="culture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vibrant Tribal Communities</h2>
+                <p class="section-subtitle">A glimpse into the rich traditions of Jharkhand's indigenous people</p>
+            </div>
+
+            <div class="culture-timeline" id="cultureTimeline">
+                <!-- Culture timeline will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section class="accommodation" id="accommodation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stay in Comfort</h2>
+                <p class="section-subtitle">From luxury resorts to eco-friendly homestays</p>
+            </div>
+
+            <div class="accommodation-types">
+                <div class="accommodation-card">
+                    <div class="accommodation-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury Hotel">
+                    </div>
+                    <div class="accommodation-content">
+                        <h3>Luxury Hotels</h3>
+                        <p>5-star properties with world-class amenities and service</p>
+                        <div class="accommodation-price">Starting ₹8,000/night</div>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="accommodation-image">
+                        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2049&q=80" alt="Eco Resort">
+                    </div>
+                    <div class="accommodation-content">
+                        <h3>Eco Resorts</h3>
+                        <p>Sustainable accommodation surrounded by nature</p>
+                        <div class="accommodation-price">Starting ₹4,500/night</div>
+                    </div>
+                </div>
+
+                <div class="accommodation-card">
+                    <div class="accommodation-image">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80" alt="Homestay">
+                    </div>
+                    <div class="accommodation-content">
+                        <h3>Tribal Homestays</h3>
+                        <p>Authentic experience with local tribal families</p>
+                        <div class="accommodation-price">Starting ₹1,500/night</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span>Jharkhand Explorer</span>
+                    </div>
+                    <p>Discover the incredible beauty of Jharkhand with our AI-powered travel platform.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/heritage/">Rich Cultural Heritage</a></li>
+                        <li><a href="/guides/">Guides</a></li>
+                        <li><a href="/transport/">Transportation & Guide</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/shop.html">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#ai-planner">AI Trip Planner</a></li>
+                        <li><a href="#accommodation">Accommodation</a></li>
+                        <li><a href="/guides/">Local Guides</a></li>
+                        <li><a href="/transport/">Transportation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 12345 67890</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@jharkhandexplorer.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ranchi, Jharkhand, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>&copy; 2025 Jharkhand Explorer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
